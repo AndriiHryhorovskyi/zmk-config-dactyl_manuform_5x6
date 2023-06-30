@@ -51,14 +51,14 @@
 
         system_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &kp C_POWER       &kp K_POWER          &kp C_AL_LOCK  &none  &none  &none
-     &none         &none         &none         &none         &none  &none                  &kp C_PWR         &kp K_PWR   &kp C_AL_SCREENSAVER  &none  &none  &none
-     &none         &none         &none         &none         &none  &none                &kp C_RESET             &none        &kp C_AL_COFFEE  &none  &none  &none
-     &none         &none         &none         &none         &none  &none                &kp C_SLEEP  &kp C_SLEEP_MODE        &kp C_AL_LOGOFF  &none  &none  &none
-                                 &none         &none                                                                    &kp C_AL_SCREEN_SAVER  &none
-                                                             &none  &none                      &none             &to 0
-                                                                    &none  &none  &none        &none
-                                                                    &none  &none  &none        &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &none  &none  &none  &none  &kp C_RESET  &kp C_POWER
+     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none        &none  &kp C_RESET
+     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none        &none  &kp C_SLEEP
+     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none        &none        &none
+                                 &none         &none                                                   &none  &none
+                                                             &none  &none                &none  &to 0
+                                                                    &none  &none  &none  &none
+                                                                    &none  &none  &none  &none
             >;
         };
     };
