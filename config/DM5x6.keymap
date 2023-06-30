@@ -19,19 +19,12 @@
     };
 
     behaviors {
-        bt_pwr_behavior: bt_pwr_behavior {
+        bt_ext_pwr_behavior: bt_ext_pwr_behavior {
             compatible = "zmk,behavior-tap-dance";
-            label = "BT_PWR_BEHAVIOR";
+            label = "BT_EXT_PWR_BEHAVIOR";
             #binding-cells = <0>;
             bindings =
                 <&bt BT_CLR>,
-                <&kp K_PWR>;
-        };
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
-            #binding-cells = <0>;
-            bindings =
                 <&ext_power EP_ON>,
                 <&ext_power EP_OFF>;
         };
@@ -68,14 +61,14 @@
 
         system_layer {
             bindings = <
-&bt_pwr_behavior  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &none  &none  &none  &none  &bt_pwr_behavior         &none
-           &none         &none         &none         &none         &none  &none                &none  &none  &none  &none             &none  &kp K_VOL_UP
-           &none         &none         &none         &none         &none  &none                &none  &none  &none  &none             &none  &kp K_VOL_DN
-           &none         &none         &none         &none         &none  &none                &none  &none  &none  &none             &none    &kp K_MUTE
-                                       &none         &none                                                   &none  &none
-                                                                   &none  &none                &none  &to 0
-                                                                          &none  &none  &none  &none
-                                                                          &none  &none  &none  &none
+&bt_ext_pwr_behavior  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &none  &none  &none  &none  &none         &none
+               &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp K_VOL_UP
+               &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp K_VOL_DN
+               &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none    &kp K_MUTE
+                                           &none         &none                                                   &none  &none
+                                                                       &none  &none                &none  &to 0
+                                                                              &none  &none  &none  &none
+                                                                              &none  &none  &none  &none
             >;
         };
     };
