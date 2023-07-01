@@ -24,7 +24,8 @@
             #binding-cells = <0>;
             bindings =
                 <&tog 1>,
-                <&sl 3>;
+                <&sl 3>,
+                <&tog 2>;
         };
         delBackspace_behavior: delBackspace_behavior {
             compatible = "zmk,behavior-mod-morph";
@@ -83,7 +84,7 @@
 &toDefaultFromLowerLayer  &kp F1           &kp F3      &kp F3          &kp F4  &kp F5                          &kp F6          &kp F7        &kp F8           &kp F9         &kp F10        &kp F11
                   &trans  &trans           &trans      &trans          &trans  &trans                          &trans          &trans        &trans           &trans  &kp KP_NUMLOCK    &kp PAGE_UP
                   &trans  &trans  &kp PRINTSCREEN      &trans          &trans  &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW          &trans  &kp PAGE_DOWN
-                  &trans  &trans        &kp K_CUT  &kp K_COPY  &kp C_AC_PASTE  &trans                          &trans          &trans        &trans           &trans          &trans         &tog 2
+                  &trans  &trans        &kp K_CUT  &kp K_COPY  &kp C_AC_PASTE  &trans                          &trans          &trans        &trans           &trans          &trans         &trans
                                             &none       &none                                                                              &kp HOME          &kp END
                                                                        &trans  &trans                          &trans          &trans
                                                                                &trans  &trans  &trans          &trans
