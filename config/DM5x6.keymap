@@ -36,6 +36,30 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+        toDefaultFromLowerLayer: toDefaultFromLowerLayer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TODEFAULTFROMLOWERLAYER";
+            #binding-cells = <0>;
+            bindings =
+                <&kp F12>,
+                <&to 0>;
+        };
+        toDefaultLayer: toDefaultLayer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TODEFAULTLAYER";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&to 0>;
+        };
+        toDefaultFromSystemLayer: toDefaultFromSystemLayer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TODEFAULTFROMSYSTEMLAYER";
+            #binding-cells = <0>;
+            bindings =
+                <&bt BT_CLR>,
+                <&to 0>;
+        };
     };
 
     keymap {
@@ -56,53 +80,53 @@
 
         lower_layer {
             bindings = <
-&kp F12  &kp F1           &kp F3         &kp F3          &kp F4       &kp F5                          &kp F6          &kp F7        &kp F8           &kp F9  &kp F10        &kp F11
- &trans  &trans           &trans         &trans          &trans       &trans                          &trans          &trans        &trans           &trans   &trans    &kp PAGE_UP
- &trans  &trans  &kp PRINTSCREEN         &trans          &trans       &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &trans  &kp PAGE_DOWN
- &trans  &trans        &kp K_CUT     &kp K_COPY  &kp C_AC_PASTE  &kp K_PASTE                          &trans          &trans        &trans           &trans   &trans         &tog 2
-                    &kp C_AC_CUT  &kp C_AC_COPY                                                                                   &kp HOME          &kp END
-                                                         &trans       &trans                          &trans          &trans
-                                                                      &trans  &trans  &trans          &trans
-                                                                      &trans  &trans  &trans          &trans
+&toDefaultFromLowerLayer  &kp F1           &kp F3         &kp F3          &kp F4       &kp F5                          &kp F6          &kp F7        &kp F8           &kp F9  &kp F10        &kp F11
+                  &trans  &trans           &trans         &trans          &trans       &trans                          &trans          &trans        &trans           &trans   &trans    &kp PAGE_UP
+                  &trans  &trans  &kp PRINTSCREEN         &trans          &trans       &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &trans  &kp PAGE_DOWN
+                  &trans  &trans        &kp K_CUT     &kp K_COPY  &kp C_AC_PASTE  &kp K_PASTE                          &trans          &trans        &trans           &trans   &trans         &tog 2
+                                     &kp C_AC_CUT  &kp C_AC_COPY                                                                                   &kp HOME          &kp END
+                                                                          &trans       &trans                          &trans          &trans
+                                                                                       &trans  &trans  &trans          &trans
+                                                                                       &trans  &trans  &trans          &trans
             >;
         };
 
         mouse_move_layer {
             bindings = <
-&trans  &trans         &trans           &trans           &trans  &trans                           &trans           &trans           &trans           &trans  &trans  &trans
-&trans  &trans  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_SUBTRACT  &trans                           &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_9           &trans  &trans  &trans
-&trans  &trans         &trans           &trans  &kp KP_NUMBER_5  &trans                  &kp KP_NUMBER_4  &kp KP_NUMBER_2  &kp KP_NUMBER_8  &kp KP_NUMBER_6  &trans  &trans
-&trans  &trans         &trans           &trans           &trans  &trans                           &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_3           &trans  &trans  &trans
-                       &trans           &trans                                                                             &kp KP_NUMBER_0           &trans
-                                                         &trans  &trans                           &trans            &to 0
-                                                                 &trans  &trans  &trans           &trans
-                                                                 &trans  &trans  &trans           &trans
+&toDefaultLayer  &trans         &trans           &trans           &trans  &trans                           &trans           &trans           &trans           &trans  &trans  &trans
+         &trans  &trans  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_SUBTRACT  &trans                           &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_9           &trans  &trans  &trans
+         &trans  &trans         &trans           &trans  &kp KP_NUMBER_5  &trans                  &kp KP_NUMBER_4  &kp KP_NUMBER_2  &kp KP_NUMBER_8  &kp KP_NUMBER_6  &trans  &trans
+         &trans  &trans         &trans           &trans           &trans  &trans                           &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_3           &trans  &trans  &trans
+                                &trans           &trans                                                                             &kp KP_NUMBER_0           &trans
+                                                                  &trans  &trans                           &trans            &to 0
+                                                                          &trans  &trans  &trans           &trans
+                                                                          &trans  &trans  &trans           &trans
             >;
         };
 
         command_layer {
             bindings = <
-&none  &kp LA(F1)  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none       &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none       &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none       &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-                   &none  &none                                            &none  &none
-                                 &none  &none                &none  &none
-                                        &none  &none  &none  &none
-                                        &none  &none  &none  &none
+&toDefaultLayer  &kp LA(F1)  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+          &none       &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+          &none       &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+          &none       &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+                             &none  &none                                            &none  &none
+                                           &none  &none                &none  &none
+                                                  &none  &none  &none  &none
+                                                  &none  &none  &none  &none
             >;
         };
 
         system_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &none  &none  &none  &none  &none  &kp C_POWER
-     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp C_RESET
-     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp C_SLEEP
-     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none        &none
-                                 &none         &none                                                   &none  &none
-                                                             &none  &none                &none  &none
-                                                                    &none  &none  &none  &none
-                                                                    &none  &none  &none  &none
+&toDefaultFromSystemLayer  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &none  &none  &none  &none  &none  &kp C_POWER
+                    &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp C_RESET
+                    &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp C_SLEEP
+                    &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none        &none
+                                                &none         &none                                                   &none  &none
+                                                                            &none  &none                &none  &none
+                                                                                   &none  &none  &none  &none
+                                                                                   &none  &none  &none  &none
             >;
         };
     };
