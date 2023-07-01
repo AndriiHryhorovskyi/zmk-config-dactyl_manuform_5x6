@@ -50,8 +50,8 @@
 &kp BACKSPACE   &kp Z     &kp X     &kp C             &kp V         &kp B                                              &kp N        &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp BSLH
                        &kp LBKT  &kp RBKT                                                                                                   &kp PLUS  &kp EQUAL
                                            &layers_behavior     &kp SPACE                                          &kp SPACE  &lt 1 ENTER
-                                                             &mt LALT TAB  &mt LEFT_SHIFT CAPS  &kp LEFT_SHIFT  &kp LEFT_ALT
-                                                             &kp LEFT_WIN            &kp LCTRL       &kp LCTRL  &kp LEFT_WIN
+                                                             &mt LALT TAB  &mt LEFT_SHIFT CAPS  &kp LEFT_SHIFT     &kp LCTRL
+                                                             &kp LEFT_WIN            &kp LCTRL        &kp LALT  &kp LEFT_WIN
             >;
         };
 
