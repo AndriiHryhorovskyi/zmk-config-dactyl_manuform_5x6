@@ -96,14 +96,14 @@
 
         command_layer {
             bindings = <
-&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-              &none  &none                                            &none  &none
-                            &none  &none                &none  &none
-                                   &none  &none  &none  &none
-                                   &none  &none  &none  &none
+&none  &kp LA(F1)  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none       &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none       &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none       &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+                   &none  &none                                            &none  &none
+                                 &none  &none                &none  &none
+                                        &none  &none  &none  &none
+                                        &none  &none  &none  &none
             >;
         };
     };
