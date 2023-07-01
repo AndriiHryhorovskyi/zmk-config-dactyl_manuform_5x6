@@ -23,9 +23,9 @@
             label = "LAYERS_BEHAVIOR";
             #binding-cells = <0>;
             bindings =
-                <&mo 3>,
                 <&tog 1>,
-                <&sl 4>;
+                <&sl 4>,
+                <&mo 3>;
         };
         delBackspace_behavior: delBackspace_behavior {
             compatible = "zmk,behavior-mod-morph";
@@ -83,10 +83,10 @@
 
         system_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &none  &none  &none  &none  &kp C_RESET  &kp C_POWER
-     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none        &none  &kp C_RESET
-     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none        &none  &kp C_SLEEP
-     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none        &none        &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &none  &none  &none  &none  &none  &kp C_POWER
+     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp C_RESET
+     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp C_SLEEP
+     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none        &none
                                  &none         &none                                                   &none  &none
                                                              &none  &none                &none  &none
                                                                     &none  &none  &none  &none
