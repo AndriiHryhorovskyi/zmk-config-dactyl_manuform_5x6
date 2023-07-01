@@ -24,8 +24,7 @@
             #binding-cells = <0>;
             bindings =
                 <&tog 1>,
-                <&sl 4>,
-                <&mo 3>;
+                <&sl 3>;
         };
         delBackspace_behavior: delBackspace_behavior {
             compatible = "zmk,behavior-mod-morph";
@@ -49,7 +48,7 @@
       &kp DEL   &kp A     &kp S     &kp D             &kp F         &kp G                                              &kp H        &kp J      &kp K      &kp L  &kp SEMI    &kp SQT
 &kp BACKSPACE   &kp Z     &kp X     &kp C             &kp V         &kp B                                              &kp N        &kp M  &kp COMMA    &kp DOT  &kp FSLH   &kp BSLH
                        &kp LBKT  &kp RBKT                                                                                                   &kp PLUS  &kp EQUAL
-                                           &layers_behavior     &kp SPACE                                          &kp SPACE  &lt 1 ENTER
+                                           &layers_behavior     &kp SPACE                                          &kp SPACE  &lt 4 ENTER
                                                              &mt LALT TAB  &mt LEFT_SHIFT CAPS  &kp LEFT_SHIFT     &kp LCTRL
                                                              &kp LEFT_WIN            &kp LCTRL        &kp LALT  &kp LEFT_WIN
             >;
@@ -60,7 +59,7 @@
 &kp F12  &kp F1           &kp F3         &kp F3          &kp F4       &kp F5                          &kp F6          &kp F7        &kp F8           &kp F9  &kp F10        &kp F11
  &trans  &trans           &trans         &trans          &trans       &trans                          &trans          &trans        &trans           &trans   &trans    &kp PAGE_UP
  &trans  &trans  &kp PRINTSCREEN         &trans          &trans       &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &trans  &kp PAGE_DOWN
- &trans  &trans        &kp K_CUT     &kp K_COPY  &kp C_AC_PASTE  &kp K_PASTE                          &trans          &trans        &trans           &trans   &trans          &to 2
+ &trans  &trans        &kp K_CUT     &kp K_COPY  &kp C_AC_PASTE  &kp K_PASTE                          &trans          &trans        &trans           &trans   &trans         &tog 2
                     &kp C_AC_CUT  &kp C_AC_COPY                                                                                   &kp HOME          &kp END
                                                          &trans       &trans                          &trans          &trans
                                                                       &trans  &trans  &trans          &trans
@@ -70,27 +69,14 @@
 
         mouse_move_layer {
             bindings = <
-&none  &none          &none            &none            &none  &none                          &none            &none            &none            &none  &none  &none
-&none  &none  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_SUBTRACT  &none                          &none  &kp KP_NUMBER_7  &kp KP_NUMBER_9            &none  &none  &none
-&none  &none          &none            &none  &kp KP_NUMBER_5  &none                &kp KP_NUMBER_4  &kp KP_NUMBER_2  &kp KP_NUMBER_8  &kp KP_NUMBER_6  &none  &none
-&none  &none          &none            &none            &none  &none                          &none  &kp KP_NUMBER_1  &kp KP_NUMBER_3            &none  &none  &none
-                      &none            &none                                                                          &kp KP_NUMBER_0            &none
-                                                        &none  &none                          &none            &to 0
-                                                               &none  &none  &none            &none
-                                                               &none  &none  &none            &none
-            >;
-        };
-
-        system_layer {
-            bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &none  &none  &none  &none  &none  &kp C_POWER
-     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp C_RESET
-     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp C_SLEEP
-     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none        &none
-                                 &none         &none                                                   &none  &none
-                                                             &none  &none                &none  &none
-                                                                    &none  &none  &none  &none
-                                                                    &none  &none  &none  &none
+&trans  &trans         &trans           &trans           &trans  &trans                           &trans           &trans           &trans           &trans  &trans  &trans
+&trans  &trans  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_SUBTRACT  &trans                           &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_9           &trans  &trans  &trans
+&trans  &trans         &trans           &trans  &kp KP_NUMBER_5  &trans                  &kp KP_NUMBER_4  &kp KP_NUMBER_2  &kp KP_NUMBER_8  &kp KP_NUMBER_6  &trans  &trans
+&trans  &trans         &trans           &trans           &trans  &trans                           &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_3           &trans  &trans  &trans
+                       &trans           &trans                                                                             &kp KP_NUMBER_0           &trans
+                                                         &trans  &trans                           &trans            &to 0
+                                                                 &trans  &trans  &trans           &trans
+                                                                 &trans  &trans  &trans           &trans
             >;
         };
 
@@ -104,6 +90,19 @@
                                  &none  &none                &none  &none
                                         &none  &none  &none  &none
                                         &none  &none  &none  &none
+            >;
+        };
+
+        system_layer {
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none                &none  &none  &none  &none  &none  &kp C_POWER
+     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp C_RESET
+     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none  &kp C_SLEEP
+     &none         &none         &none         &none         &none  &none                &none  &none  &none  &none  &none        &none
+                                 &none         &none                                                   &none  &none
+                                                             &none  &none                &none  &none
+                                                                    &none  &none  &none  &none
+                                                                    &none  &none  &none  &none
             >;
         };
     };
